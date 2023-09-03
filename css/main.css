@@ -1,0 +1,275 @@
+html {
+  font-family: Rubik, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.body {
+  position: relative;
+}
+
+@media (min-width:768px) {
+  .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+.body .phone {
+  position: relative;
+  text-align: center;
+  margin: 20px auto;
+  width: 40%;
+  background-color: hsl(270, 20%, 96%);
+  border: 10px solid white;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+@media (max-width:767px) {
+  .body .phone {
+    width: 85%;
+  }
+}
+
+@media (min-width:1300px) {
+  .container {
+    width: 1250px;
+    margin: auto;
+  }
+
+  .body .phone {
+    width: 30%;
+  }
+}
+
+.phone-body {
+  overflow: hidden;
+}
+
+.body .phone::before {
+  content: "";
+  position: absolute;
+  height: 900px;
+  width: 400px;
+  top: -32%;
+  left: -217px;
+  border-radius: 300px;
+  z-index: -1;
+  background-image: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+@media (min-width:1300px) {
+  .body .phone::before {
+    content: "";
+    position: absolute;
+    height: 1000px;
+    border-radius: 300px;
+
+  }
+
+}
+
+.body .phone header {
+  padding: 30px 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  border-radius: 30px 30px 10px 10px;
+  position: relative;
+  -webkit-border-radius: 30px 30px 10px 10px;
+  -moz-border-radius: 30px 30px 10px 10px;
+  -ms-border-radius: 30px 30px 10px 10px;
+  -o-border-radius: 30px 30px 10px 10px;
+}
+
+.body .phone header::before {
+  content: "";
+  position: absolute;
+  width: 52%;
+  height: 45px;
+  background-color: white;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.body .phone header .collection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.body .phone header i {
+  color: white;
+}
+
+.body .phone header .collection img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.body .phone header .collection h1 {
+  font-size: 14px;
+  color: white;
+}
+
+.body .phone header .collection h1 .status {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: start;
+}
+
+
+.body .phone .massages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  row-gap: 3px;
+}
+
+
+.body .phone .massages .receiver {
+  color: hsl(276, 55%, 52%);
+  background-color: hsl(276deg 55% 52% / 10%);
+  width: fit-content;
+  max-width: 60%;
+  padding: 10px 14px;
+  margin: 5px 0 0 15px;
+  text-align: start;
+  border-radius: 15px 15px 15px 6px;
+}
+
+.body .phone .massages .pull {
+  position: relative;
+  min-width: 72%;
+  background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 15px 22px 15px 40px;
+  font-size: 14px;
+}
+
+.body .phone .massages .pull::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+
+.body .phone .massages .pull .price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.body .phone .massages .sender {
+  align-self: flex-end;
+  margin: 15px 10px 0;
+}
+
+.body .phone .massages .sender:not(.imgs) {
+  color: hsl(271, 15%, 43%);
+  background-color: #fff;
+  width: fit-content;
+  max-width: 60%;
+  padding: 10px 14px;
+  margin: 5px 15px 0 0px;
+  text-align: start;
+  border-radius: 15px 15px 6px 15px;
+}
+
+.body .phone .massages .sender img {
+  width: 45px;
+  margin: 0 3px;
+  border-radius: 10px;
+}
+
+.body .phone .send-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+
+.body .phone .send-box textarea {
+  resize: none;
+  height: 50px;
+  border: none;
+  padding: 15px 20px;
+}
+
+.body .phone .send-box textarea:focus {
+  outline: none;
+}
+
+.body .phone .send-box textarea::placeholder {
+  color: hsl(206, 6%, 79%);
+}
+
+.body .phone .send-box i {
+  padding: 8px;
+  background-color: hsl(271, 36%, 24%);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  color: white;
+}
+
+.body .info {
+  text-align: center;
+}
+
+@media (min-width:768px) {
+  .body .info {
+    width: 50%;
+  }
+
+}
+
+.body .info .header {
+  color: hsl(271, 36%, 24%);
+}
+
+.body .info .text {
+  color: hsl(270, 7%, 64%);
+  line-height: 1.7;
+  padding: 0 15px;
+}
